@@ -495,7 +495,7 @@ const PageContent = ({ categoryId, onBack }) => {
         <ClickableCertCard
           title="Provisional Certificate - B.A"
           subtitle="Agurchand Manmull Jain College, Chennai"
-          imageSrc="/images/provisional-certificate.jpg"
+          imageSrc={`${import.meta.env.BASE_URL}images/provisional-certificate.jpg`}
         />
       </div>
     ),
@@ -590,7 +590,7 @@ const PageContent = ({ categoryId, onBack }) => {
         <ClickableCertCard
           title="Penetration Testing Certificate"
           subtitle="Red Team Hacker Academy"
-          imageSrc="/images/cybersecurity-certificate.jpg"
+          imageSrc={`${import.meta.env.BASE_URL}images/cybersecurity-certificate.jpg`}
         />
       </div>
     ),
@@ -747,7 +747,7 @@ const Categories = ({ activePage, setActivePage }) => {
                     style={{ background: 'linear-gradient(135deg, #0a0a0a 0%, #001a00 50%, #0a0a0a 100%)' }}
                   >
                     <img
-                      src={`/images/${{ college: 'college-logo', skills: 'skills-logo', cybersecurity: 'cybersecurity-logo', internship: 'internship-logo' }[category.id]}.png`}
+                      src={`${import.meta.env.BASE_URL}images/${{ college: 'college-logo', skills: 'skills-logo', cybersecurity: 'cybersecurity-logo', internship: 'internship-logo' }[category.id]}.png`}
                       alt={category.title}
                       className="w-full h-full object-cover"
                     />

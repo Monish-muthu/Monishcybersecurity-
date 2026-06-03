@@ -66,7 +66,7 @@ const Hero = () => {
           >
             <div className="relative mb-4">
               <img
-                src="/images/photo.png"
+                src={`${import.meta.env.BASE_URL}images/photo.png`}
                 alt="Monish M"
                 className="w-36 h-36 md:w-48 md:h-48 rounded-full border-2 border-[#00FF66] object-cover"
                 style={{ boxShadow: '0 0 20px #00FF66, 0 0 40px #00FF6640' }}

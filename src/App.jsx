@@ -1,7 +1,5 @@
 import MatrixRain from './components/MatrixRain';
 import LoadingScreen from './components/LoadingScreen';
-import CyberCursor from './components/CyberCursor';
-import MouseGlow from './components/MouseGlow';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Categories from './components/Categories';
@@ -16,8 +14,6 @@ const App = () => {
     <div className="relative">
       <LoadingScreen />
       <MatrixRain />
-      <CyberCursor />
-      <MouseGlow />
       <div className="scan-line-overlay" />
 
       <Navbar />
