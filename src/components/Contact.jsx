@@ -47,22 +47,24 @@ const Contact = () => {
 
         <div className="max-w-3xl mx-auto space-y-6">
           {contactLinks.map((link, index) => (
-            <a
+            <motion.div
               key={link.label}
-              href={link.href}
-              {...(!link.href.startsWith('mailto:') && { target: "_blank", rel: "noopener noreferrer" })}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.02 }}
-              className="block relative rounded-xl overflow-hidden group"
-              style={{
-                background: 'linear-gradient(145deg, #050505 0%, #000d00 50%, #050505 100%)',
-                border: '1px solid #00FF6640',
-                boxShadow: '0 0 15px #00FF6615, inset 0 0 15px #00FF6605',
-              }}
             >
+              <a
+                href={link.href}
+                {...(!link.href.startsWith('mailto:') && { target: "_blank", rel: "noopener noreferrer" })}
+                className="block relative rounded-xl overflow-hidden group"
+                style={{
+                  background: 'linear-gradient(145deg, #050505 0%, #000d00 50%, #050505 100%)',
+                  border: '1px solid #00FF6640',
+                  boxShadow: '0 0 15px #00FF6615, inset 0 0 15px #00FF6605',
+                }}
+              >
               <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute inset-0 opacity-[0.02]" style={{ background: 'repeating-linear-gradient(0deg, transparent, transparent 2px, #00FF66 2px, #00FF66 4px)' }} />
                 <div
@@ -114,7 +116,8 @@ const Contact = () => {
               </div>
 
               <div className="absolute bottom-0 left-0 right-0 h-[2px]" style={{ background: 'linear-gradient(90deg, transparent, #00FF6660, transparent)', opacity: 0, transition: 'opacity 0.3s' }} />
-            </a>
+              </a>
+            </motion.div>
           ))}
         </div>
 
