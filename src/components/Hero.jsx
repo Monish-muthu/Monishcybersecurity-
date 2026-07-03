@@ -173,7 +173,7 @@ const Hero = () => {
               {[
                 { icon: FaGithub, href: 'https://github.com/Monish-muthu', label: 'GitHub' },
                 { icon: FaLinkedin, href: 'https://www.linkedin.com/in/monish-muthu/', label: 'LinkedIn' },
-                { icon: FaEnvelope, href: 'mailto:monishseetha24@gmail.com', label: 'Email' },
+                { icon: FaEnvelope, href: 'https://mail.google.com/mail/?view=cm&fs=1&to=monishseetha24@gmail.com', label: 'Email' },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}

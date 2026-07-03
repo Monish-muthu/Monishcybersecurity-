@@ -20,7 +20,7 @@ const contactLinks = [
     icon: FaEnvelope,
     label: 'Email',
     value: 'monishseetha24@gmail.com',
-    href: 'mailto:monishseetha24@gmail.com',
+    href: 'https://mail.google.com/mail/?view=cm&fs=1&to=monishseetha24@gmail.com',
     terminal: 'echo "message" | sendmail monishseetha24@gmail.com',
   },
 ];
