@@ -22,12 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# Source image originals (copies are in public/images)
-college logo.png
-cyber security .png
-cyber security certificate .jpg
-internship.png
-provisinol .jpg
-skills .png
-Associate Full stack developer.png
