@@ -50,8 +50,7 @@ const Contact = () => {
             <motion.a
               key={link.label}
               href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
+              {...(link.href.startsWith('mailto:') ? {} : { target: "_blank", rel: "noopener noreferrer" })}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
