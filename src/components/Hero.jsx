@@ -178,7 +178,8 @@ const Hero = () => {
                 <motion.a
                   key={label}
                   href={href}
-                  {...(href.startsWith('mailto:') ? {} : { target: "_blank", rel: "noopener noreferrer" })}
+                  target={href.startsWith('mailto:') ? '_self' : '_blank'}
+                  rel={href.startsWith('mailto:') ? '' : 'noopener noreferrer'}
                   className="text-[#00FF6680] hover:text-[#00FF66] transition-colors duration-300 text-3xl"
                   whileHover={{ scale: 1.2, y: -3 }}
                   whileTap={{ scale: 0.95 }}
