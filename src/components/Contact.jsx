@@ -47,11 +47,10 @@ const Contact = () => {
 
         <div className="max-w-3xl mx-auto space-y-6">
           {contactLinks.map((link, index) => (
-            <motion.a
+            <a
               key={link.label}
               href={link.href}
-              target={link.href.startsWith('mailto:') ? '_self' : '_blank'}
-              rel={link.href.startsWith('mailto:') ? '' : 'noopener noreferrer'}
+              {...(!link.href.startsWith('mailto:') && { target: "_blank", rel: "noopener noreferrer" })}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -115,7 +114,7 @@ const Contact = () => {
               </div>
 
               <div className="absolute bottom-0 left-0 right-0 h-[2px]" style={{ background: 'linear-gradient(90deg, transparent, #00FF6660, transparent)', opacity: 0, transition: 'opacity 0.3s' }} />
-            </motion.a>
+            </a>
           ))}
         </div>
 
