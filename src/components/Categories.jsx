@@ -793,7 +793,7 @@ const Categories = ({ activePage, setActivePage }) => {
                     <img
                       src={`${import.meta.env.BASE_URL}images/${{ college: 'college-logo', skills: 'skills-logo', cybersecurity: 'cybersecurity-logo', internship: 'internship-logo', work: 'fullstack-logo' }[category.id]}.png`}
                       alt={category.title}
-                      className="w-full h-full object-cover"
+                      className={`w-full h-full object-cover ${category.id === 'work' ? 'rotate-90' : ''}`}
                     />
                     <div className="absolute inset-0" style={{ background: 'linear-gradient(transparent 40%, rgba(0,0,0,0.85))' }} />
                     <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
