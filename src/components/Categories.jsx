@@ -369,6 +369,13 @@ const categories = [
     icon: FaBriefcase,
     description: 'Real-time projects, bug fixing & team collaboration',
   },
+  {
+    id: 'work',
+    title: 'Work',
+    subtitle: 'Associate Full Stack Developer',
+    icon: FaCode,
+    description: 'Full stack development & professional work',
+  },
 ];
 
 const ProjectItem = ({ title, description, tech, link }) => (
@@ -639,6 +646,43 @@ const PageContent = ({ categoryId, onBack }) => {
         </div>
       </div>
     ),
+    work: (
+      <div className="mt-6 space-y-6">
+        <SectionHeading>Position</SectionHeading>
+        <div className="glass-card p-5">
+          <div className="flex items-start gap-4">
+            <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-[#00FF6610] border border-[#00FF6630] shrink-0">
+              <FaCode className="text-[#00FF66] text-lg" />
+            </div>
+            <div>
+              <h4 className="font-[Orbitron] text-sm font-semibold text-[#00FF66]">
+                Associate Full Stack Developer
+              </h4>
+              <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6680] mt-1">
+                // Add your company name here
+              </p>
+              <p className="font-[Share_Tech_Mono] text-[11px] text-[#00FF6660] mt-1">
+                // Add your work period here
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <SectionHeading>Work Projects</SectionHeading>
+        <div className="glass-card p-5 border-2 border-dashed border-[#00FF6630]">
+          <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6660] text-center">
+            + Add your work projects here
+          </p>
+        </div>
+
+        <SectionHeading>Certificates</SectionHeading>
+        <div className="glass-card p-5 border-2 border-dashed border-[#00FF6630]">
+          <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6660] text-center">
+            + Add your work certificates here
+          </p>
+        </div>
+      </div>
+    ),
   };
 
   const category = categories.find((c) => c.id === categoryId);
@@ -742,12 +786,12 @@ const Categories = ({ activePage, setActivePage }) => {
               style={{ transformStyle: 'preserve-3d', perspective: '1000px' }}
             >
               <div className="flex flex-col items-center text-center w-full">
-                {['college', 'skills', 'cybersecurity', 'internship'].includes(category.id) ? (
+                {['college', 'skills', 'cybersecurity', 'internship', 'work'].includes(category.id) ? (
                   <div className="w-full aspect-[4/3] relative rounded-xl overflow-hidden"
                     style={{ background: 'linear-gradient(135deg, #0a0a0a 0%, #001a00 50%, #0a0a0a 100%)' }}
                   >
                     <img
-                      src={`${import.meta.env.BASE_URL}images/${{ college: 'college-logo', skills: 'skills-logo', cybersecurity: 'cybersecurity-logo', internship: 'internship-logo' }[category.id]}.png`}
+                      src={`${import.meta.env.BASE_URL}images/${{ college: 'college-logo', skills: 'skills-logo', cybersecurity: 'cybersecurity-logo', internship: 'internship-logo', work: 'fullstack-logo' }[category.id]}.png`}
                       alt={category.title}
                       className="w-full h-full object-cover"
                     />
