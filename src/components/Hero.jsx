@@ -38,8 +38,19 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex flex-col overflow-hidden"
     >
+      {/* Quote Header Banner */}
+      <div className="relative z-10 w-full text-center py-8 md:py-10">
+        <p className="font-[Orbitron] text-base md:text-xl lg:text-2xl font-bold text-[#00FF66] leading-relaxed tracking-wide">
+          &ldquo;The human element is truly security&rsquo;s weakest link.&rdquo;
+        </p>
+        <p className="font-[Orbitron] text-xs md:text-sm text-[#00FF6680] tracking-[0.3em] uppercase font-semibold mt-3">
+          &mdash; Kevin Mitnick
+        </p>
+      </div>
+
+      {/* Hero Content */}
       <div className="absolute inset-0 z-0 opacity-30">
         <Suspense fallback={null}>
           <Canvas
@@ -55,7 +66,7 @@ const Hero = () => {
         </Suspense>
       </div>
 
-      <div className="section-container relative z-10 py-28 md:py-32">
+      <div className="section-container relative z-10 py-28 md:py-32 flex-1 flex items-center">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
           {/* LEFT: Photo + Software Developer */}
           <motion.div

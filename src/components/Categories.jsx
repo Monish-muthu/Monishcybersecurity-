@@ -611,7 +611,7 @@ const PageContent = ({ categoryId, onBack }) => {
             </div>
             <div>
               <h4 className="font-[Orbitron] text-sm font-semibold text-[#00FF66]">
-                Cybersecurity Intern
+                Full Stack Development Intern
               </h4>
               <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6680] mt-1">
                 Luxz Delight IT Company
@@ -623,16 +623,16 @@ const PageContent = ({ categoryId, onBack }) => {
           </div>
           <div className="mt-4 ml-14 space-y-2">
             <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6680] flex items-start gap-2">
-              <span className="text-[#00FF66]">▸</span> Worked on real-time projects
+              <span className="text-[#00FF66]">▸</span> Developed and maintained web applications using modern tech stack
             </p>
             <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6680] flex items-start gap-2">
-              <span className="text-[#00FF66]">▸</span> Identified and solved multiple bugs
+              <span className="text-[#00FF66]">▸</span> Built and optimized RESTful APIs and database integrations
             </p>
             <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6680] flex items-start gap-2">
-              <span className="text-[#00FF66]">▸</span> Collaborated with development teams
+              <span className="text-[#00FF66]">▸</span> Collaborated with cross-functional teams on feature development
             </p>
             <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6680] flex items-start gap-2">
-              <span className="text-[#00FF66]">▸</span> Improved website/application functionality
+              <span className="text-[#00FF66]">▸</span> Identified and fixed bugs to improve application performance
             </p>
           </div>
         </div>
@@ -697,7 +697,7 @@ const PageContent = ({ categoryId, onBack }) => {
             e.stopPropagation();
             onBack();
           }}
-          className="flex items-center gap-2 font-[Share_Tech_Mono] text-xs text-[#00FF6680] hover:text-[#00FF66] transition-colors bg-transparent border-none cursor-pointer px-3 py-2 rounded border-[1px] border-[#00FF6630] hover:border-[#00FF66] hover:bg-[#00FF6610] min-h-[44px]"
+          className="hidden md:flex items-center gap-2 font-[Share_Tech_Mono] text-xs text-[#00FF6680] hover:text-[#00FF66] transition-colors bg-transparent border-none cursor-pointer px-3 py-2 rounded border-[1px] border-[#00FF6630] hover:border-[#00FF66] hover:bg-[#00FF6610] min-h-[44px]"
           aria-label="Back to Portfolio"
         >
           <FaArrowLeft className="text-[10px]" />

@@ -30,6 +30,7 @@ body {
   color: #00FF66;
   font-family: "Share Tech Mono", monospace;
   overflow-x: hidden;
+  min-height: 100vh;
   min-height: 100dvh;
 }
 
@@ -317,6 +318,15 @@ body {
     rgba(0, 255, 102, 0.015) 2px,
     rgba(0, 255, 102, 0.015) 4px
   );
+}
+
+@media (max-width: 768px) {
+  .scan-line-overlay {
+    position: absolute;
+  }
+  .matrix-rain-canvas {
+    position: absolute;
+  }
 }
 
 .corner-bracket {
