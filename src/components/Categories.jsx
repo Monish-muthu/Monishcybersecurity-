@@ -659,7 +659,7 @@ const PageContent = ({ categoryId, onBack }) => {
                 Associate Full Stack Developer
               </h4>
               <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6680] mt-1">
-                // Add your company name here
+                Niral
               </p>
               <p className="font-[Share_Tech_Mono] text-[11px] text-[#00FF6660] mt-1">
                 // Add your work period here
