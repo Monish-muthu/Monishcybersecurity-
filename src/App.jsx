@@ -5,10 +5,15 @@ import Hero from './components/Hero';
 import Categories from './components/Categories';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { trackVisitor } from './utils/trackVisitor';
 
 const App = () => {
   const [activePage, setActivePage] = useState(null);
+
+  useEffect(() => {
+    trackVisitor();
+  }, []);
 
   return (
     <div className="relative">
