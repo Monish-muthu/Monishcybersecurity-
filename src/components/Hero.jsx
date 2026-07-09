@@ -159,7 +159,7 @@ const Hero = () => {
               <a href="#contact" className="neon-btn" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
                 Contact Me
               </a>
-              <a href="/resume.pdf" className="neon-btn" download>
+              <a href={`${import.meta.env.BASE_URL}Monish_Resume.pdf`} className="neon-btn" download="Monish_Resume.pdf">
                 Download Resume
               </a>
             </motion.div>
