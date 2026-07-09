@@ -13,5 +13,5 @@ function removeCrossorigin() {
 
 export default defineConfig({
   plugins: [react(), tailwindcss(), removeCrossorigin()],
-  base: '/Monishcybersecurity-/',
+  base: process.env.NETLIFY ? '/' : '/Monishcybersecurity-/',
 })
