@@ -24,7 +24,7 @@ const Footer = () => {
   return (
     <footer className="relative border-t border-[#00FF6620] py-8">
       <div className="section-container">
-        <div className="bg-[#050505] border border-[#00FF6620] rounded-lg p-4 font-[JetBrains_Mono] text-[10px] md:text-xs mb-6">
+        <div className="bg-[#050505] border border-[#00FF6620] rounded-lg p-3 sm:p-4 font-[JetBrains_Mono] text-[10px] md:text-xs mb-6 overflow-x-auto">
           <div className="flex items-center gap-2 mb-3 border-b border-[#00FF6620] pb-2">
             <div className="w-2 h-2 rounded-full bg-[#00FF66] animate-pulse" />
             <span className="text-[#00FF6680]">terminal@monish-portfolio:~$</span>
@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-center sm:text-left">
           <div className="text-center md:text-left">
             <p className="font-[Orbitron] text-sm font-bold text-[#00FF66]" style={{ textShadow: '0 0 5px #00FF6680' }}>
               &lt;MM /&gt;

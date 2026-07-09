@@ -30,6 +30,7 @@ body {
   color: #00FF66;
   font-family: "Share Tech Mono", monospace;
   overflow-x: hidden;
+  min-height: 100dvh;
 }
 
 @media (hover: none) and (pointer: coarse) {
@@ -354,7 +355,22 @@ body {
   .section-title {
     font-size: 1.5rem;
   }
+  .section-container {
+    padding: 0 1rem;
+  }
+  .section-line {
+    width: 60px;
+    margin-bottom: 1.5rem;
+  }
   .mouse-glow {
     display: none;
+  }
+  .glass-card {
+    backdrop-filter: blur(6px);
+  }
+  .neon-btn {
+    padding: 10px 20px;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
   }
 }

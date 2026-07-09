@@ -689,7 +689,7 @@ const PageContent = ({ categoryId, onBack }) => {
 
   return (
     <div>
-      <div className="flex items-center gap-6 flex-wrap">
+      <div className="flex items-center gap-4 sm:gap-6 flex-wrap">
         <button
           type="button"
           onClick={(e) => {
@@ -697,7 +697,7 @@ const PageContent = ({ categoryId, onBack }) => {
             e.stopPropagation();
             onBack();
           }}
-          className="flex items-center gap-2 font-[Share_Tech_Mono] text-xs text-[#00FF6680] hover:text-[#00FF66] transition-colors bg-transparent border-none cursor-pointer px-3 py-1.5 rounded border-[1px] border-[#00FF6630] hover:border-[#00FF66] hover:bg-[#00FF6610]"
+          className="flex items-center gap-2 font-[Share_Tech_Mono] text-xs text-[#00FF6680] hover:text-[#00FF66] transition-colors bg-transparent border-none cursor-pointer px-3 py-2 rounded border-[1px] border-[#00FF6630] hover:border-[#00FF66] hover:bg-[#00FF6610] min-h-[44px]"
           aria-label="Back to Portfolio"
         >
           <FaArrowLeft className="text-[10px]" />
@@ -717,7 +717,7 @@ const PageContent = ({ categoryId, onBack }) => {
         </div>
       </div>
 
-      <div className="section-line mt-6 mb-10" />
+      <div className="section-line mt-4 sm:mt-6 mb-6 sm:mb-10" />
 
       {contentMap[categoryId]}
     </div>
@@ -739,7 +739,7 @@ const Categories = ({ activePage, setActivePage }) => {
 
   if (activePage) {
     return (
-      <section id="categories" className="relative py-32">
+      <section id="categories" className="relative py-24 md:py-32">
         <div className="section-container">
           <PageContent categoryId={activePage} onBack={handleBack} />
         </div>
@@ -748,7 +748,7 @@ const Categories = ({ activePage, setActivePage }) => {
   }
 
   return (
-    <section id="categories" className="relative py-32">
+    <section id="categories" className="relative py-24 md:py-32">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -766,7 +766,7 @@ const Categories = ({ activePage, setActivePage }) => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {categories.map((category, index) => (
             <motion.div
               key={category.id}

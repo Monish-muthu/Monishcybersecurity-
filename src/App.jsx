@@ -21,7 +21,7 @@ const App = () => {
       <MatrixRain />
       <div className="scan-line-overlay" />
 
-      <Navbar />
+      <Navbar activePage={activePage} setActivePage={setActivePage} />
 
       <main className="md:pl-12">
         <div style={{ display: activePage ? 'none' : 'block' }}>

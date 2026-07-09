@@ -27,7 +27,7 @@ const contactLinks = [
 
 const Contact = () => {
   return (
-    <section id="contact" className="relative py-32">
+    <section id="contact" className="relative py-24 md:py-32">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -79,9 +79,9 @@ const Contact = () => {
                 />
               </div>
 
-              <div className="relative flex items-center gap-5 p-6 sm:p-8">
+              <div className="relative flex items-center gap-4 p-5 sm:p-8">
                 <div
-                  className="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl shrink-0 transition-all duration-300 group-hover:scale-110"
+                  className="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl shrink-0 transition-all duration-300 group-hover:scale-110"
                   style={{
                     background: 'linear-gradient(135deg, #00FF6615, #00FF6608)',
                     border: '1px solid #00FF6640',

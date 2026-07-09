@@ -38,7 +38,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden"
     >
       <div className="absolute inset-0 z-0 opacity-30">
         <Suspense fallback={null}>
@@ -55,8 +55,8 @@ const Hero = () => {
         </Suspense>
       </div>
 
-      <div className="section-container relative z-10 py-24 md:py-32">
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-10 md:gap-16">
+      <div className="section-container relative z-10 py-28 md:py-32">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
           {/* LEFT: Photo + Software Developer */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -151,7 +151,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="flex flex-wrap gap-5 mb-12 justify-center md:justify-start"
+              className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-5 mb-12 justify-center md:justify-start"
             >
               <a href="#categories" className="neon-btn" onClick={(e) => { e.preventDefault(); document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' }); }}>
                 View Portfolio
@@ -168,7 +168,7 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 1 }}
-              className="flex gap-10 justify-center md:justify-start"
+              className="flex gap-8 sm:gap-10 justify-center md:justify-start"
             >
               {[
                 { icon: FaGithub, href: 'https://github.com/Monish-muthu', label: 'GitHub' },
@@ -191,7 +191,7 @@ const Hero = () => {
       </div>
 
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
