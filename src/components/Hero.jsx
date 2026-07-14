@@ -1,9 +1,9 @@
-import { useRef, Suspense } from 'react';
-import { motion } from 'framer-motion';
+import { useRef, useState, useEffect, useCallback, Suspense } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Sphere, MeshDistortMaterial } from '@react-three/drei';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaTimes } from 'react-icons/fa';
 
 function CyberSphere() {
   const meshRef = useRef();
@@ -33,6 +33,100 @@ function CyberSphere() {
 }
 
 const aboutText = "I'm a BA Criminology graduate and certified Penetration Tester from Red Team Hacker Academy. Passionate about ethical hacking, vulnerability assessment, and bug fixing. Currently working as an intern at Luxz Delight IT Company, where I identify and solve real-world technical issues and collaborate with development teams to improve application security.";
+
+const ProfileImage = ({ src, alt }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const open = useCallback(() => {
+    setIsOpen(true);
+    history.pushState({ profileImage: true }, '');
+  }, []);
+
+  const close = useCallback(() => {
+    setIsOpen(false);
+  }, []);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') close();
+    };
+
+    const handlePopState = () => {
+      setIsOpen(false);
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('popstate', handlePopState);
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('popstate', handlePopState);
+      document.body.style.overflow = '';
+    };
+  }, [isOpen, close]);
+
+  return (
+    <>
+      <div className="relative mb-4 cursor-pointer group" onClick={open}>
+        <img
+          src={src}
+          alt={alt}
+          className="w-44 h-44 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full border-2 border-[#00FF66] object-cover transition-transform duration-300 group-hover:scale-105"
+          style={{ boxShadow: '0 0 20px #00FF66, 0 0 40px #00FF6640' }}
+        />
+        <div className="absolute inset-0 rounded-full border border-[#00FF6630] animate-pulse" />
+        <div className="absolute inset-0 rounded-full bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+          <span className="text-[#00FF66] text-xs font-[Share_Tech_Mono] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Click to view
+          </span>
+        </div>
+      </div>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 backdrop-blur-sm"
+            onClick={close}
+          >
+            <motion.button
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.2 }}
+              onClick={close}
+              className="absolute top-4 right-4 md:top-6 md:right-6 w-10 h-10 flex items-center justify-center rounded-full bg-[#00FF6620] border border-[#00FF6640] text-[#00FF66] hover:bg-[#00FF6640] hover:border-[#00FF66] transition-all duration-200 cursor-pointer z-10"
+              aria-label="Close"
+            >
+              <FaTimes className="text-sm" />
+            </motion.button>
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3, ease: 'easeOut' }}
+              className="relative max-w-[90vw] max-h-[85vh]"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={src}
+                alt={alt}
+                className="max-w-[90vw] max-h-[85vh] rounded-2xl border-2 border-[#00FF6660] object-contain"
+                style={{ boxShadow: '0 0 40px #00FF6630, 0 0 80px #00FF6615' }}
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+};
 
 const Hero = () => {
   return (
@@ -75,20 +169,15 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex flex-col items-center shrink-0"
           >
-            <div className="relative mb-4">
-              <img
-                src={`${import.meta.env.BASE_URL}images/photo.png`}
-                alt="Monish M"
-                className="w-36 h-36 md:w-48 md:h-48 rounded-full border-2 border-[#00FF66] object-cover"
-                style={{ boxShadow: '0 0 20px #00FF66, 0 0 40px #00FF6640' }}
-              />
-              <div className="absolute inset-0 rounded-full border border-[#00FF6630] animate-pulse" />
-            </div>
+            <ProfileImage
+              src={`${import.meta.env.BASE_URL}images/portfolio-profile.jpeg`}
+              alt="Monish M"
+            />
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="font-[Orbitron] text-sm md:text-base font-semibold text-[#00FF66] tracking-widest"
+              className="font-[Orbitron] text-sm md:text-base font-semibold text-[#00FF66] tracking-widest mt-10"
               style={{ textShadow: '0 0 10px #00FF6680' }}
             >
               SOFTWARE DEVELOPER
