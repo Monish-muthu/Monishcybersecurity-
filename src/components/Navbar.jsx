@@ -93,10 +93,10 @@ const Navbar = ({ activePage, setActivePage }) => {
       </motion.nav>
 
       {/* Mobile: Top bar with hamburger + back button */}
-      <div className="md:hidden fixed top-0 left-0 right-0 z-[1001] flex items-center justify-between px-4 py-3 bg-black/80 backdrop-blur-md border-b border-[#00FF6620]">
-        <div className="flex items-center gap-3">
+      <div className="md:hidden fixed top-0 left-0 right-0 z-[1001] flex items-center justify-between px-3 sm:px-4 py-2.5 sm:py-3 bg-black/80 backdrop-blur-md border-b border-[#00FF6620]">
+        <div className="flex items-center gap-2 sm:gap-3">
           <button
-            className="text-[#00FF66] text-xl bg-transparent border-none cursor-pointer p-1"
+            className="text-[#00FF66] text-xl bg-transparent border-none cursor-pointer p-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           >
@@ -111,7 +111,7 @@ const Navbar = ({ activePage, setActivePage }) => {
                 exit={{ opacity: 0, x: -10 }}
                 transition={{ duration: 0.2 }}
                 onClick={handleBack}
-                className="flex items-center gap-1.5 font-[Share_Tech_Mono] text-xs text-[#00FF6680] hover:text-[#00FF66] transition-colors bg-transparent border border-[#00FF6630] rounded px-2.5 py-1 cursor-pointer"
+                className="flex items-center gap-1.5 font-[Share_Tech_Mono] text-xs text-[#00FF6680] hover:text-[#00FF66] transition-colors bg-transparent border border-[#00FF6630] rounded px-2.5 py-1.5 cursor-pointer min-h-[44px]"
                 aria-label="Back to Portfolio"
               >
                 <FaArrowLeft className="text-[10px]" />
@@ -133,7 +133,7 @@ const Navbar = ({ activePage, setActivePage }) => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -50 }}
-            className="md:hidden fixed inset-0 z-[999] bg-black/95 backdrop-blur-md flex flex-col items-center justify-center gap-6 pt-16"
+            className="md:hidden fixed inset-0 z-[999] bg-black/95 backdrop-blur-md flex flex-col items-center justify-center gap-8 pt-16"
           >
             {navLinks.map((link) => (
               <a
@@ -143,7 +143,7 @@ const Navbar = ({ activePage, setActivePage }) => {
                   e.preventDefault();
                   scrollTo(link.id);
                 }}
-                className={`font-[Share_Tech_Mono] text-lg no-underline ${
+                className={`font-[Share_Tech_Mono] text-lg sm:text-xl no-underline min-h-[44px] flex items-center px-6 ${
                   activeSection === link.id
                     ? 'text-[#00FF66]'
                     : 'text-[#00FF6680]'

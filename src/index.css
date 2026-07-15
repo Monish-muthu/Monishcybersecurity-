@@ -271,28 +271,49 @@ body {
 }
 
 .section-container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .section-container {
+    padding: 0 1.5rem;
+  }
 }
 
 .section-title {
   font-family: "Orbitron", sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #00FF66;
   text-shadow: 0 0 10px #00FF66, 0 0 20px #00FF6640;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 640px) {
+  .section-title {
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
 }
 
 .section-line {
-  width: 80px;
+  width: 60px;
   height: 2px;
   background: #00FF66;
   box-shadow: 0 0 5px #00FF66, 0 0 15px #00FF6640;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .section-line {
+    width: 80px;
+    margin-bottom: 2.5rem;
+  }
 }
 
 .section-divider {
@@ -362,16 +383,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .section-title {
-    font-size: 1.5rem;
-  }
-  .section-container {
-    padding: 0 1rem;
-  }
-  .section-line {
-    width: 60px;
-    margin-bottom: 1.5rem;
-  }
   .mouse-glow {
     display: none;
   }
@@ -379,8 +390,9 @@ body {
     backdrop-filter: blur(6px);
   }
   .neon-btn {
-    padding: 10px 20px;
-    font-size: 0.75rem;
+    padding: 10px 18px;
+    font-size: 0.7rem;
     letter-spacing: 1px;
+    min-height: 44px;
   }
 }

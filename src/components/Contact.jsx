@@ -27,7 +27,7 @@ const contactLinks = [
 
 const Contact = () => {
   return (
-    <section id="contact" className="relative py-24 md:py-32">
+    <section id="contact" className="relative py-16 sm:py-20 md:py-32">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -35,17 +35,17 @@ const Contact = () => {
           transition={{ duration: 0.4 }}
           viewport={{ once: true }}
         >
-          <p className="font-[Share_Tech_Mono] text-sm text-[#00CC44] mb-1">
+          <p className="font-[Share_Tech_Mono] text-xs sm:text-sm text-[#00CC44] mb-1">
             {'>'} establish_connection --secure
           </p>
           <h2 className="section-title">CONTACT ME</h2>
           <div className="section-line" />
-          <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6660] mt-2 mb-10">
+          <p className="font-[Share_Tech_Mono] text-[10px] sm:text-xs text-[#00FF6660] mt-2 mb-6 sm:mb-10">
             // select a channel to connect
           </p>
         </motion.div>
 
-        <div className="max-w-3xl mx-auto space-y-6">
+        <div className="max-w-3xl mx-auto space-y-4 sm:space-y-6">
           {contactLinks.map((link, index) => (
             <motion.div
               key={link.label}
@@ -79,31 +79,31 @@ const Contact = () => {
                 />
               </div>
 
-              <div className="relative flex items-center gap-4 p-5 sm:p-8">
+              <div className="relative flex items-center gap-3 sm:gap-4 p-4 sm:p-6 md:p-8">
                 <div
-                  className="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl shrink-0 transition-all duration-300 group-hover:scale-110"
+                  className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 flex items-center justify-center rounded-xl shrink-0 transition-all duration-300 group-hover:scale-110"
                   style={{
                     background: 'linear-gradient(135deg, #00FF6615, #00FF6608)',
                     border: '1px solid #00FF6640',
                     boxShadow: '0 0 12px #00FF6620',
                   }}
                 >
-                  <link.icon className="text-[#00FF66] text-xl sm:text-2xl" style={{ filter: 'drop-shadow(0 0 4px #00FF66)' }} />
+                  <link.icon className="text-[#00FF66] text-lg sm:text-xl md:text-2xl" style={{ filter: 'drop-shadow(0 0 4px #00FF66)' }} />
                 </div>
 
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-3 mb-1">
-                    <span className="font-[Orbitron] text-sm sm:text-base font-bold text-[#00FF66]" style={{ textShadow: '0 0 8px #00FF6660' }}>
+                  <div className="flex items-center gap-2 sm:gap-3 mb-0.5 sm:mb-1">
+                    <span className="font-[Orbitron] text-xs sm:text-sm md:text-base font-bold text-[#00FF66]" style={{ textShadow: '0 0 8px #00FF6660' }}>
                       {link.label}
                     </span>
-                    <span className="font-[Orbitron] text-[8px] font-bold tracking-[0.15em] text-black bg-[#00FF66] px-2 py-0.5 rounded hidden sm:inline-block" style={{ boxShadow: '0 0 8px #00FF6640' }}>
+                    <span className="font-[Orbitron] text-[7px] sm:text-[8px] font-bold tracking-[0.15em] text-black bg-[#00FF66] px-1.5 sm:px-2 py-0.5 rounded hidden sm:inline-block" style={{ boxShadow: '0 0 8px #00FF6640' }}>
                       ACTIVE
                     </span>
                   </div>
-                  <p className="font-[Share_Tech_Mono] text-xs sm:text-sm text-[#00FF6680] truncate">
+                  <p className="font-[Share_Tech_Mono] text-[10px] sm:text-xs md:text-sm text-[#00FF6680] truncate">
                     {link.value}
                   </p>
-                  <p className="font-[Share_Tech_Mono] text-[9px] text-[#00FF6640] mt-1 hidden sm:block">
+                  <p className="font-[Share_Tech_Mono] text-[8px] sm:text-[9px] text-[#00FF6640] mt-1 hidden sm:block">
                     {link.terminal}
                   </p>
                 </div>
@@ -126,13 +126,13 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, delay: 0.4 }}
           viewport={{ once: true }}
-          className="max-w-3xl mx-auto mt-8"
+          className="max-w-3xl mx-auto mt-6 sm:mt-8"
         >
-          <div className="glass-card p-5 sm:p-6">
-            <p className="font-[Share_Tech_Mono] text-xs text-[#00CC44] mb-3">
+          <div className="glass-card p-4 sm:p-5 md:p-6">
+            <p className="font-[Share_Tech_Mono] text-[10px] sm:text-xs text-[#00CC44] mb-3">
               // terminal.output
             </p>
-            <div className="bg-[#050505] border border-[#00FF6620] rounded-lg p-4 font-[JetBrains_Mono] text-xs">
+            <div className="bg-[#050505] border border-[#00FF6620] rounded-lg p-3 sm:p-4 font-[JetBrains_Mono] text-[10px] sm:text-xs overflow-x-auto">
               <p className="text-[#00FF6680]">
                 <span className="text-[#00CC44]">$</span> echo &quot;Let&apos;s build something secure together&quot;
               </p>

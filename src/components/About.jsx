@@ -26,7 +26,7 @@ const aboutItems = [
 
 const About = () => {
   return (
-    <section id="about" className="relative py-32">
+    <section id="about" className="relative py-16 sm:py-24 md:py-32">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -34,26 +34,26 @@ const About = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="font-[Share_Tech_Mono] text-sm text-[#00CC44] mb-1">
+          <p className="font-[Share_Tech_Mono] text-xs sm:text-sm text-[#00CC44] mb-1">
             {'>'} whoami
           </p>
           <h2 className="section-title">About Me</h2>
           <div className="section-line" />
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 items-start">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 items-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="glass-card p-6"
+            className="glass-card p-4 sm:p-5 md:p-6"
           >
             <div className="corner-bracket">
-              <p className="font-[Share_Tech_Mono] text-sm text-[#00FF6680] mb-1">
+              <p className="font-[Share_Tech_Mono] text-[10px] sm:text-sm text-[#00FF6680] mb-1">
                 // profile.md
               </p>
-              <p className="font-[JetBrains_Mono] text-sm leading-relaxed text-[#00FF66CC]">
+              <p className="font-[JetBrains_Mono] text-xs sm:text-sm leading-relaxed text-[#00FF66CC]">
                 I'm <span className="text-[#00FF66] font-semibold">Monish M</span>, a passionate
                 cybersecurity professional and ethical hacker. With a BA in Criminology and a
                 Penetration Testing certification from{' '}
@@ -61,7 +61,7 @@ const About = () => {
                 blend of analytical thinking and technical expertise.
               </p>
               <br />
-              <p className="font-[JetBrains_Mono] text-sm leading-relaxed text-[#00FF66CC]">
+              <p className="font-[JetBrains_Mono] text-xs sm:text-sm leading-relaxed text-[#00FF66CC]">
                 My journey spans from understanding criminal behavior to identifying digital
                 vulnerabilities. Currently working as an intern at{' '}
                 <span className="text-[#00FF66]">Luxz Delight IT Company</span>, I specialize in
@@ -71,7 +71,7 @@ const About = () => {
             </div>
           </motion.div>
 
-          <div className="grid gap-4">
+          <div className="grid gap-3 sm:gap-4">
             {aboutItems.map((item, index) => (
               <motion.div
                 key={item.title}
@@ -79,16 +79,16 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="glass-card p-4 flex gap-4 items-start group"
+                className="glass-card p-3 sm:p-4 flex gap-3 sm:gap-4 items-start group"
               >
-                <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-[#00FF6610] border border-[#00FF6630] shrink-0 group-hover:bg-[#00FF6620] transition-colors">
-                  <item.icon className="text-[#00FF66] text-lg" />
+                <div className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-lg bg-[#00FF6610] border border-[#00FF6630] shrink-0 group-hover:bg-[#00FF6620] transition-colors">
+                  <item.icon className="text-[#00FF66] text-base sm:text-lg" />
                 </div>
                 <div>
-                  <h3 className="font-[Orbitron] text-sm font-semibold text-[#00FF66] mb-1">
+                  <h3 className="font-[Orbitron] text-[11px] sm:text-sm font-semibold text-[#00FF66] mb-0.5 sm:mb-1">
                     {item.title}
                   </h3>
-                  <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6680]">
+                  <p className="font-[Share_Tech_Mono] text-[10px] sm:text-xs text-[#00FF6680]">
                     {item.desc}
                   </p>
                 </div>

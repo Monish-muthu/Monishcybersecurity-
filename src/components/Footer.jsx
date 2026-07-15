@@ -22,10 +22,10 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative border-t border-[#00FF6620] py-8">
+    <footer className="relative border-t border-[#00FF6620] py-6 sm:py-8">
       <div className="section-container">
-        <div className="bg-[#050505] border border-[#00FF6620] rounded-lg p-3 sm:p-4 font-[JetBrains_Mono] text-[10px] md:text-xs mb-6 overflow-x-auto">
-          <div className="flex items-center gap-2 mb-3 border-b border-[#00FF6620] pb-2">
+        <div className="bg-[#050505] border border-[#00FF6620] rounded-lg p-3 sm:p-4 font-[JetBrains_Mono] text-[9px] sm:text-[10px] md:text-xs mb-4 sm:mb-6 overflow-x-auto">
+          <div className="flex items-center gap-2 mb-2 sm:mb-3 border-b border-[#00FF6620] pb-2">
             <div className="w-2 h-2 rounded-full bg-[#00FF66] animate-pulse" />
             <span className="text-[#00FF6680]">terminal@monish-portfolio:~$</span>
           </div>
@@ -46,21 +46,21 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-center sm:text-left">
-          <div className="text-center md:text-left">
-            <p className="font-[Orbitron] text-sm font-bold text-[#00FF66]" style={{ textShadow: '0 0 5px #00FF6680' }}>
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-3 md:gap-4 text-center sm:text-left">
+          <div className="text-center sm:text-left">
+            <p className="font-[Orbitron] text-xs sm:text-sm font-bold text-[#00FF66]" style={{ textShadow: '0 0 5px #00FF6680' }}>
               &lt;MM /&gt;
             </p>
-            <p className="font-[Share_Tech_Mono] text-[10px] text-[#00FF6660]">
+            <p className="font-[Share_Tech_Mono] text-[9px] sm:text-[10px] text-[#00FF6660]">
               &copy; {new Date().getFullYear()} Monish M. All rights reserved.
             </p>
           </div>
 
-          <div className="font-[Share_Tech_Mono] text-[10px] text-[#00FF6660]">
+          <div className="font-[Share_Tech_Mono] text-[9px] sm:text-[10px] text-[#00FF6660]">
             <span className="text-[#00FF6680]">SYS_TIME:</span> {time}
           </div>
 
-          <p className="font-[Share_Tech_Mono] text-[10px] text-[#00FF6660]">
+          <p className="font-[Share_Tech_Mono] text-[9px] sm:text-[10px] text-[#00FF6660]">
             Designed & Developed with 💚 by Monish M
           </p>
         </div>

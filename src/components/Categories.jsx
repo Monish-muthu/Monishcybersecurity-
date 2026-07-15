@@ -421,8 +421,8 @@ const CertItem = ({ title, org, date }) => (
 );
 
 const SectionHeading = ({ children }) => (
-  <h3 className="font-[Orbitron] text-xs font-semibold text-[#00FF66] uppercase tracking-widest mb-5 mt-8 flex items-center gap-3">
-    <span className="w-6 h-[1px] bg-[#00FF66]" style={{ boxShadow: '0 0 3px #00FF66' }} />
+  <h3 className="font-[Orbitron] text-[10px] sm:text-xs font-semibold text-[#00FF66] uppercase tracking-widest mb-3 sm:mb-5 mt-6 sm:mt-8 flex items-center gap-2 sm:gap-3">
+    <span className="w-4 sm:w-6 h-[1px] bg-[#00FF66]" style={{ boxShadow: '0 0 3px #00FF66' }} />
     {children}
   </h3>
 );
@@ -430,22 +430,22 @@ const SectionHeading = ({ children }) => (
 const PageContent = ({ categoryId, onBack }) => {
   const contentMap = {
     skills: (
-      <div className="mt-6">
+      <div className="mt-4 sm:mt-6">
         <Skills />
       </div>
     ),
     college: (
-      <div className="mt-6 space-y-6">
+      <div className="mt-4 sm:mt-6 space-y-4 sm:space-y-6">
         <SectionHeading>Education</SectionHeading>
-        <div className="glass-card p-5">
-          <div className="flex items-start gap-4">
-            <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-[#00FF6610] border border-[#00FF6630] shrink-0">
-              <FaGraduationCap className="text-[#00FF66] text-lg" />
+        <div className="glass-card p-4 sm:p-5">
+          <div className="flex items-start gap-3 sm:gap-4">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-lg bg-[#00FF6610] border border-[#00FF6630] shrink-0">
+              <FaGraduationCap className="text-[#00FF66] text-base sm:text-lg" />
             </div>
             <div>
-              <h4 className="font-[Orbitron] text-sm font-semibold text-[#00FF66]">UG Graduation</h4>
-              <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6680] mt-1">BA Criminology & Police Administration</p>
-              <p className="font-[Share_Tech_Mono] text-[11px] text-[#00FF6660] mt-1">
+              <h4 className="font-[Orbitron] text-xs sm:text-sm font-semibold text-[#00FF66]">UG Graduation</h4>
+              <p className="font-[Share_Tech_Mono] text-[10px] sm:text-xs text-[#00FF6680] mt-1">BA Criminology & Police Administration</p>
+              <p className="font-[Share_Tech_Mono] text-[9px] sm:text-[11px] text-[#00FF6660] mt-1">
                 Agurchand Manmull Jain College, Meenambakkam, Chennai
               </p>
             </div>
@@ -455,28 +455,28 @@ const PageContent = ({ categoryId, onBack }) => {
         <SectionHeading>Project</SectionHeading>
         <div className="relative rounded-xl overflow-hidden" style={{ background: 'linear-gradient(145deg, #050505 0%, #001a00 50%, #050505 100%)', border: '1px solid #00FF6640', boxShadow: '0 0 15px #00FF6620, inset 0 0 15px #00FF6608' }}>
           <div className="absolute inset-0 opacity-10" style={{ background: 'repeating-linear-gradient(0deg, transparent, transparent 2px, #00FF6605 2px, #00FF6605 4px)' }} />
-          <div className="relative p-6 md:p-8">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-[2px]" style={{ background: '#00FF66', boxShadow: '0 0 6px #00FF66' }} />
-              <span className="font-[Share_Tech_Mono] text-[10px] text-[#00FF6660] uppercase tracking-[0.2em]">College Project</span>
+          <div className="relative p-4 sm:p-6 md:p-8">
+            <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+              <div className="w-6 sm:w-8 h-[2px]" style={{ background: '#00FF66', boxShadow: '0 0 6px #00FF66' }} />
+              <span className="font-[Share_Tech_Mono] text-[9px] sm:text-[10px] text-[#00FF6660] uppercase tracking-[0.2em]">College Project</span>
               <div className="flex-1 h-[2px]" style={{ background: 'linear-gradient(90deg, #00FF6640, transparent)' }} />
             </div>
 
-            <h3 className="font-[Orbitron] text-base md:text-lg font-bold text-[#00FF66] leading-tight mb-3" style={{ textShadow: '0 0 10px #00FF6660, 0 0 20px #00FF6630' }}>
+            <h3 className="font-[Orbitron] text-sm sm:text-base md:text-lg font-bold text-[#00FF66] leading-tight mb-2 sm:mb-3" style={{ textShadow: '0 0 10px #00FF6660, 0 0 20px #00FF6630' }}>
               A Study of Minors and Youngsters Involved in Motorcycle Theft
             </h3>
 
-            <p className="font-[Share_Tech_Mono] text-xs md:text-sm text-[#00FF6680] leading-relaxed mb-6">
+            <p className="font-[Share_Tech_Mono] text-[10px] sm:text-xs md:text-sm text-[#00FF6680] leading-relaxed mb-4 sm:mb-6">
               Dissertation submitted to the University of Madras in partial fulfilment of BA Criminology & Police Administration. Analyzed juvenile involvement in motorcycle theft, peer influence, socioeconomic factors, and legal frameworks under the Juvenile Justice Act, 2015.
             </p>
 
-            <div className="flex items-center gap-3 text-[10px] text-[#00FF6660] mb-6">
-              <span className="flex items-center gap-1.5"><FaGraduationCap className="text-[8px]" /> Criminology</span>
-              <span className="w-1 h-1 rounded-full bg-[#00FF6630]" />
+            <div className="flex flex-wrap items-center gap-1.5 sm:gap-3 text-[8px] sm:text-[10px] text-[#00FF6660] mb-4 sm:mb-6">
+              <span className="flex items-center gap-1 sm:gap-1.5"><FaGraduationCap className="text-[6px] sm:text-[8px]" /> Criminology</span>
+              <span className="w-0.5 sm:w-1 h-0.5 sm:h-1 rounded-full bg-[#00FF6630]" />
               <span>Legal Research</span>
-              <span className="w-1 h-1 rounded-full bg-[#00FF6630]" />
+              <span className="w-0.5 sm:w-1 h-0.5 sm:h-1 rounded-full bg-[#00FF6630]" />
               <span>Case Study</span>
-              <span className="w-1 h-1 rounded-full bg-[#00FF6630]" />
+              <span className="w-0.5 sm:w-1 h-0.5 sm:h-1 rounded-full bg-[#00FF6630]" />
               <span>NCRB Data</span>
             </div>
 
@@ -484,15 +484,15 @@ const PageContent = ({ categoryId, onBack }) => {
               href="https://drive.google.com/file/d/17YJKl4D0AsXD6oE5-5w3VvksyG16wKs7/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-6 py-3 rounded-lg font-[Orbitron] text-xs md:text-sm font-semibold text-black bg-[#00FF66] hover:bg-[#33ff88] hover:scale-105 active:scale-95 transition-all duration-200"
+              className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-[Orbitron] text-[10px] sm:text-xs md:text-sm font-semibold text-black bg-[#00FF66] hover:bg-[#33ff88] hover:scale-105 active:scale-95 transition-all duration-200"
               style={{ boxShadow: '0 0 20px #00FF6640, 0 0 40px #00FF6620', textShadow: '0 0 2px rgba(0,0,0,0.3)' }}
             >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM6 20V4h5v7h7v9H6zm2-7h6v1H8v-1zm0 2h8v1H8v-1zm0 2h8v1H8v-1z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM6 20V4h5v7h7v9H6zm2-7h6v1H8v-1zm0 2h8v1H8v-1zm0 2h8v1H8v-1z"/></svg>
               VIEW FULL PROJECT PDF
             </a>
 
-            <p className="font-[Share_Tech_Mono] text-[9px] text-[#00FF6640] mt-3 flex items-center gap-1.5">
-              <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#00FF66] animate-pulse" />
+            <p className="font-[Share_Tech_Mono] text-[8px] sm:text-[9px] text-[#00FF6640] mt-2 sm:mt-3 flex items-center gap-1.5">
+              <span className="inline-block w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-full bg-[#00FF66] animate-pulse" />
               Opens in new tab
             </p>
           </div>
@@ -507,21 +507,21 @@ const PageContent = ({ categoryId, onBack }) => {
       </div>
     ),
     cybersecurity: (
-      <div className="mt-6 space-y-6">
+      <div className="mt-4 sm:mt-6 space-y-4 sm:space-y-6">
         <SectionHeading>Certification</SectionHeading>
-        <div className="glass-card p-5">
-          <div className="flex items-start gap-4">
-            <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-[#00FF6610] border border-[#00FF6630] shrink-0">
-              <FaCertificate className="text-[#00FF66] text-lg" />
+        <div className="glass-card p-4 sm:p-5">
+          <div className="flex items-start gap-3 sm:gap-4">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-lg bg-[#00FF6610] border border-[#00FF6630] shrink-0">
+              <FaCertificate className="text-[#00FF66] text-base sm:text-lg" />
             </div>
             <div>
-              <h4 className="font-[Orbitron] text-sm font-semibold text-[#00FF66]">
+              <h4 className="font-[Orbitron] text-xs sm:text-sm font-semibold text-[#00FF66]">
                 Penetration Testing Certificate
               </h4>
-              <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6680] mt-1">
+              <p className="font-[Share_Tech_Mono] text-[10px] sm:text-xs text-[#00FF6680] mt-1">
                 Red Team Hacker Academy
               </p>
-              <p className="font-[Share_Tech_Mono] text-[11px] text-[#00FF6660] mt-1">
+              <p className="font-[Share_Tech_Mono] text-[9px] sm:text-[11px] text-[#00FF6660] mt-1">
                 // Add your certificate description here
               </p>
             </div>
@@ -535,43 +535,43 @@ const PageContent = ({ categoryId, onBack }) => {
             <div className="absolute left-0 right-0 h-[2px] animate-pulse" style={{ top: '0%', background: 'linear-gradient(90deg, transparent, #00FF6650, transparent)', boxShadow: '0 0 10px #00FF6640', animation: 'scanLine 4s linear infinite' }} />
           </div>
 
-          <div className="relative p-6 md:p-8">
-            <div className="flex items-center justify-between mb-5">
-              <div className="flex items-center gap-3">
-                <FaShieldAlt className="text-[#00FF66] text-lg" style={{ filter: 'drop-shadow(0 0 6px #00FF66)' }} />
-                <span className="font-[Share_Tech_Mono] text-[10px] text-[#00FF6660] uppercase tracking-[0.2em]">// CYBERSECURITY_PROJECT</span>
+          <div className="relative p-4 sm:p-6 md:p-8">
+            <div className="flex items-center justify-between mb-4 sm:mb-5">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <FaShieldAlt className="text-[#00FF66] text-base sm:text-lg" style={{ filter: 'drop-shadow(0 0 6px #00FF66)' }} />
+                <span className="font-[Share_Tech_Mono] text-[9px] sm:text-[10px] text-[#00FF6660] uppercase tracking-[0.2em]">// CYBERSECURITY_PROJECT</span>
               </div>
-              <span className="font-[Orbitron] text-[9px] font-bold tracking-[0.15em] text-black bg-[#00FF66] px-3 py-1 rounded" style={{ boxShadow: '0 0 10px #00FF6640' }}>
+              <span className="font-[Orbitron] text-[7px] sm:text-[9px] font-bold tracking-[0.15em] text-black bg-[#00FF66] px-2 sm:px-3 py-0.5 sm:py-1 rounded" style={{ boxShadow: '0 0 10px #00FF6640' }}>
                 COMPLETED
               </span>
             </div>
 
-            <h3 className="font-[Orbitron] text-base md:text-lg font-bold text-[#00FF66] leading-tight mb-3" style={{ textShadow: '0 0 10px #00FF6660, 0 0 20px #00FF6630' }}>
+            <h3 className="font-[Orbitron] text-sm sm:text-base md:text-lg font-bold text-[#00FF66] leading-tight mb-2 sm:mb-3" style={{ textShadow: '0 0 10px #00FF6660, 0 0 20px #00FF6630' }}>
               Penetration Testing & Vulnerability Assessment Report
             </h3>
 
-            <p className="font-[Share_Tech_Mono] text-xs md:text-sm text-[#00FF6680] leading-relaxed mb-5">
+            <p className="font-[Share_Tech_Mono] text-[10px] sm:text-xs md:text-sm text-[#00FF6680] leading-relaxed mb-4 sm:mb-5">
               Comprehensive security assessment involving network reconnaissance, vulnerability scanning, exploitation, and post-exploitation analysis. Identified critical security flaws and documented remediation strategies for hardened system defense.
             </p>
 
-            <div className="flex flex-wrap items-center gap-2 mb-6">
-              <span className="font-[Share_Tech_Mono] text-[10px] text-[#00FF66] bg-[#00FF6610] border border-[#00FF6625] px-2.5 py-1 rounded flex items-center gap-1.5">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#00FF66]" style={{ boxShadow: '0 0 4px #00FF66' }} /> Nmap
+            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-4 sm:mb-6">
+              <span className="font-[Share_Tech_Mono] text-[9px] sm:text-[10px] text-[#00FF66] bg-[#00FF6610] border border-[#00FF6625] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded flex items-center gap-1 sm:gap-1.5">
+                <span className="inline-block w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-full bg-[#00FF66]" style={{ boxShadow: '0 0 4px #00FF66' }} /> Nmap
               </span>
-              <span className="font-[Share_Tech_Mono] text-[10px] text-[#00FF66] bg-[#00FF6610] border border-[#00FF6625] px-2.5 py-1 rounded flex items-center gap-1.5">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#00FF66]" style={{ boxShadow: '0 0 4px #00FF66' }} /> Burp Suite
+              <span className="font-[Share_Tech_Mono] text-[9px] sm:text-[10px] text-[#00FF66] bg-[#00FF6610] border border-[#00FF6625] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded flex items-center gap-1 sm:gap-1.5">
+                <span className="inline-block w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-full bg-[#00FF66]" style={{ boxShadow: '0 0 4px #00FF66' }} /> Burp Suite
               </span>
-              <span className="font-[Share_Tech_Mono] text-[10px] text-[#00FF66] bg-[#00FF6610] border border-[#00FF6625] px-2.5 py-1 rounded flex items-center gap-1.5">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#00FF66]" style={{ boxShadow: '0 0 4px #00FF66' }} /> Kali Linux
+              <span className="font-[Share_Tech_Mono] text-[9px] sm:text-[10px] text-[#00FF66] bg-[#00FF6610] border border-[#00FF6625] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded flex items-center gap-1 sm:gap-1.5">
+                <span className="inline-block w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-full bg-[#00FF66]" style={{ boxShadow: '0 0 4px #00FF66' }} /> Kali Linux
               </span>
-              <span className="font-[Share_Tech_Mono] text-[10px] text-[#00FF66] bg-[#00FF6610] border border-[#00FF6625] px-2.5 py-1 rounded flex items-center gap-1.5">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#00FF66]" style={{ boxShadow: '0 0 4px #00FF66' }} /> Metasploit
+              <span className="font-[Share_Tech_Mono] text-[9px] sm:text-[10px] text-[#00FF66] bg-[#00FF6610] border border-[#00FF6625] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded flex items-center gap-1 sm:gap-1.5">
+                <span className="inline-block w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-full bg-[#00FF66]" style={{ boxShadow: '0 0 4px #00FF66' }} /> Metasploit
               </span>
-              <span className="font-[Share_Tech_Mono] text-[10px] text-[#00FF66] bg-[#00FF6610] border border-[#00FF6625] px-2.5 py-1 rounded flex items-center gap-1.5">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#00FF66]" style={{ boxShadow: '0 0 4px #00FF66' }} /> Wireshark
+              <span className="font-[Share_Tech_Mono] text-[9px] sm:text-[10px] text-[#00FF66] bg-[#00FF6610] border border-[#00FF6625] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded flex items-center gap-1 sm:gap-1.5">
+                <span className="inline-block w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-full bg-[#00FF66]" style={{ boxShadow: '0 0 4px #00FF66' }} /> Wireshark
               </span>
-              <span className="font-[Share_Tech_Mono] text-[10px] text-[#00FF66] bg-[#00FF6610] border border-[#00FF6625] px-2.5 py-1 rounded flex items-center gap-1.5">
-                <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#00FF66]" style={{ boxShadow: '0 0 4px #00FF66' }} /> OWASP
+              <span className="font-[Share_Tech_Mono] text-[9px] sm:text-[10px] text-[#00FF66] bg-[#00FF6610] border border-[#00FF6625] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded flex items-center gap-1 sm:gap-1.5">
+                <span className="inline-block w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-full bg-[#00FF66]" style={{ boxShadow: '0 0 4px #00FF66' }} /> OWASP
               </span>
             </div>
 
@@ -579,15 +579,15 @@ const PageContent = ({ categoryId, onBack }) => {
               href="https://drive.google.com/file/d/1VaXWHgLI31NH9hYtNrAsJnmEH6mErCtX/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-6 py-3 rounded-lg font-[Orbitron] text-xs md:text-sm font-semibold text-black bg-[#00FF66] hover:bg-[#33ff88] hover:scale-105 active:scale-95 transition-all duration-200"
+              className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg font-[Orbitron] text-[10px] sm:text-xs md:text-sm font-semibold text-black bg-[#00FF66] hover:bg-[#33ff88] hover:scale-105 active:scale-95 transition-all duration-200"
               style={{ boxShadow: '0 0 20px #00FF6640, 0 0 40px #00FF6620' }}
             >
-              <FaShieldAlt className="text-sm" />
+              <FaShieldAlt className="text-xs sm:text-sm" />
               VIEW CYBERSECURITY PROJECT
             </a>
 
-            <p className="font-[Share_Tech_Mono] text-[9px] text-[#00FF6640] mt-3 flex items-center gap-1.5">
-              <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#00FF66] animate-pulse" style={{ boxShadow: '0 0 4px #00FF66' }} />
+            <p className="font-[Share_Tech_Mono] text-[8px] sm:text-[9px] text-[#00FF6640] mt-2 sm:mt-3 flex items-center gap-1.5">
+              <span className="inline-block w-1 sm:w-1.5 h-1 sm:h-1.5 rounded-full bg-[#00FF66] animate-pulse" style={{ boxShadow: '0 0 4px #00FF66' }} />
               Opens in new tab &middot; PDF format
             </p>
           </div>
@@ -602,66 +602,65 @@ const PageContent = ({ categoryId, onBack }) => {
       </div>
     ),
     internship: (
-      <div className="mt-6 space-y-6">
+      <div className="mt-4 sm:mt-6 space-y-4 sm:space-y-6">
         <SectionHeading>Position</SectionHeading>
-        <div className="glass-card p-5">
-          <div className="flex items-start gap-4">
-            <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-[#00FF6610] border border-[#00FF6630] shrink-0">
-              <FaBriefcase className="text-[#00FF66] text-lg" />
+        <div className="glass-card p-4 sm:p-5">
+          <div className="flex items-start gap-3 sm:gap-4">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-lg bg-[#00FF6610] border border-[#00FF6630] shrink-0">
+              <FaBriefcase className="text-[#00FF66] text-base sm:text-lg" />
             </div>
             <div>
-              <h4 className="font-[Orbitron] text-sm font-semibold text-[#00FF66]">
+              <h4 className="font-[Orbitron] text-xs sm:text-sm font-semibold text-[#00FF66]">
                 Full Stack Development Intern
               </h4>
-              <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6680] mt-1">
+              <p className="font-[Share_Tech_Mono] text-[10px] sm:text-xs text-[#00FF6680] mt-1">
                 Luxz Delight IT Company
               </p>
-              <p className="font-[Share_Tech_Mono] text-[11px] text-[#00FF6660] mt-1">
+              <p className="font-[Share_Tech_Mono] text-[9px] sm:text-[11px] text-[#00FF6660] mt-1">
                 // Add your internship period here
               </p>
             </div>
           </div>
-          <div className="mt-4 ml-14 space-y-2">
-            <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6680] flex items-start gap-2">
+          <div className="mt-3 sm:mt-4 ml-12 sm:ml-14 space-y-1.5 sm:space-y-2">
+            <p className="font-[Share_Tech_Mono] text-[10px] sm:text-xs text-[#00FF6680] flex items-start gap-1.5 sm:gap-2">
               <span className="text-[#00FF66]">▸</span> Developed and maintained web applications using modern tech stack
             </p>
-            <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6680] flex items-start gap-2">
+            <p className="font-[Share_Tech_Mono] text-[10px] sm:text-xs text-[#00FF6680] flex items-start gap-1.5 sm:gap-2">
               <span className="text-[#00FF66]">▸</span> Built and optimized RESTful APIs and database integrations
             </p>
-            <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6680] flex items-start gap-2">
+            <p className="font-[Share_Tech_Mono] text-[10px] sm:text-xs text-[#00FF6680] flex items-start gap-1.5 sm:gap-2">
               <span className="text-[#00FF66]">▸</span> Collaborated with cross-functional teams on feature development
             </p>
-            <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6680] flex items-start gap-2">
+            <p className="font-[Share_Tech_Mono] text-[10px] sm:text-xs text-[#00FF6680] flex items-start gap-1.5 sm:gap-2">
               <span className="text-[#00FF66]">▸</span> Identified and fixed bugs to improve application performance
             </p>
           </div>
         </div>
 
         <SectionHeading>Internship Projects</SectionHeading>
-        {/* ADD YOUR INTERNSHIP PROJECTS HERE */}
-        <div className="glass-card p-5 border-2 border-dashed border-[#00FF6630]">
-          <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6660] text-center">
+        <div className="glass-card p-4 sm:p-5 border-2 border-dashed border-[#00FF6630]">
+          <p className="font-[Share_Tech_Mono] text-[10px] sm:text-xs text-[#00FF6660] text-center">
             + Add your internship projects here
           </p>
         </div>
       </div>
     ),
     work: (
-      <div className="mt-6 space-y-6">
+      <div className="mt-4 sm:mt-6 space-y-4 sm:space-y-6">
         <SectionHeading>Position</SectionHeading>
-        <div className="glass-card p-5">
-          <div className="flex items-start gap-4">
-            <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-[#00FF6610] border border-[#00FF6630] shrink-0">
-              <FaCode className="text-[#00FF66] text-lg" />
+        <div className="glass-card p-4 sm:p-5">
+          <div className="flex items-start gap-3 sm:gap-4">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-lg bg-[#00FF6610] border border-[#00FF6630] shrink-0">
+              <FaCode className="text-[#00FF66] text-base sm:text-lg" />
             </div>
             <div>
-              <h4 className="font-[Orbitron] text-sm font-semibold text-[#00FF66]">
+              <h4 className="font-[Orbitron] text-xs sm:text-sm font-semibold text-[#00FF66]">
                 Associate Full Stack Developer
               </h4>
-              <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6680] mt-1">
+              <p className="font-[Share_Tech_Mono] text-[10px] sm:text-xs text-[#00FF6680] mt-1">
                 Niral
               </p>
-              <p className="font-[Share_Tech_Mono] text-[11px] text-[#00FF6660] mt-1">
+              <p className="font-[Share_Tech_Mono] text-[9px] sm:text-[11px] text-[#00FF6660] mt-1">
                 // Add your work period here
               </p>
             </div>
@@ -669,15 +668,15 @@ const PageContent = ({ categoryId, onBack }) => {
         </div>
 
         <SectionHeading>Work Projects</SectionHeading>
-        <div className="glass-card p-5 border-2 border-dashed border-[#00FF6630]">
-          <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6660] text-center">
+        <div className="glass-card p-4 sm:p-5 border-2 border-dashed border-[#00FF6630]">
+          <p className="font-[Share_Tech_Mono] text-[10px] sm:text-xs text-[#00FF6660] text-center">
             + Add your work projects here
           </p>
         </div>
 
         <SectionHeading>Certificates</SectionHeading>
-        <div className="glass-card p-5 border-2 border-dashed border-[#00FF6630]">
-          <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6660] text-center">
+        <div className="glass-card p-4 sm:p-5 border-2 border-dashed border-[#00FF6630]">
+          <p className="font-[Share_Tech_Mono] text-[10px] sm:text-xs text-[#00FF6660] text-center">
             + Add your work certificates here
           </p>
         </div>
@@ -739,7 +738,7 @@ const Categories = ({ activePage, setActivePage }) => {
 
   if (activePage) {
     return (
-      <section id="categories" className="relative py-24 md:py-32">
+      <section id="categories" className="relative py-16 sm:py-20 md:py-32">
         <div className="section-container">
           <PageContent categoryId={activePage} onBack={handleBack} />
         </div>
@@ -748,7 +747,7 @@ const Categories = ({ activePage, setActivePage }) => {
   }
 
   return (
-    <section id="categories" className="relative py-24 md:py-32">
+    <section id="categories" className="relative py-16 sm:py-20 md:py-32">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -756,17 +755,17 @@ const Categories = ({ activePage, setActivePage }) => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="font-[Share_Tech_Mono] text-sm text-[#00CC44] mb-2">
+          <p className="font-[Share_Tech_Mono] text-xs sm:text-sm text-[#00CC44] mb-1 sm:mb-2">
             {'>'} cat portfolio.sections
           </p>
-          <h2 className="section-title mt-4">My Portfolio</h2>
+          <h2 className="section-title mt-3 sm:mt-4">My Portfolio</h2>
           <div className="section-line" />
-          <p className="font-[Share_Tech_Mono] text-xs text-[#00FF6660] mb-10">
+          <p className="font-[Share_Tech_Mono] text-[10px] sm:text-xs text-[#00FF6660] mb-6 sm:mb-10">
             // Click on any section to explore
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {categories.map((category, index) => (
             <motion.div
               key={category.id}
@@ -782,7 +781,7 @@ const Categories = ({ activePage, setActivePage }) => {
               }}
               whileTap={{ scale: 0.97, transition: { duration: 0.1 } }}
               onClick={() => handleCardClick(category.id)}
-              className="glass-card p-4 cursor-pointer group transition-all duration-200 rounded-xl overflow-hidden"
+              className="glass-card p-3 sm:p-4 cursor-pointer group transition-all duration-200 rounded-xl overflow-hidden"
               style={{ transformStyle: 'preserve-3d', perspective: '1000px' }}
             >
               <div className="flex flex-col items-center text-center w-full">
@@ -794,34 +793,35 @@ const Categories = ({ activePage, setActivePage }) => {
                       src={`${import.meta.env.BASE_URL}images/${{ college: 'college-logo', skills: 'skills-logo', cybersecurity: 'cybersecurity-logo', internship: 'internship-logo', work: 'fullstack-logo' }[category.id]}.png`}
                       alt={category.title}
                       className={`absolute inset-0 w-full h-full ${category.id === 'work' ? 'object-contain rotate-90 scale-150' : 'object-cover'}`}
+                      loading="lazy"
                     />
                     <div className="absolute inset-0" style={{ background: 'linear-gradient(transparent 40%, rgba(0,0,0,0.85))' }} />
-                    <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
-                      <h3 className="font-[Orbitron] text-base font-semibold text-[#00FF66]">
+                    <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 text-center">
+                      <h3 className="font-[Orbitron] text-sm sm:text-base font-semibold text-[#00FF66]">
                         {category.title}
                       </h3>
                       <div className="flex items-center justify-center gap-1.5 text-[#00FF6680] group-hover:text-[#00FF66] transition-colors mt-1">
-                        <span className="font-[Share_Tech_Mono] text-[10px]">Explore</span>
-                        <FaChevronDown className="text-[8px] rotate-[-90deg]" />
+                        <span className="font-[Share_Tech_Mono] text-[9px] sm:text-[10px]">Explore</span>
+                        <FaChevronDown className="text-[7px] sm:text-[8px] rotate-[-90deg]" />
                       </div>
                     </div>
                   </div>
                 ) : (
                   <>
                     <motion.div
-                      className="w-20 h-20 flex items-center justify-center rounded-2xl bg-[#00FF6610] border border-[#00FF6630] mb-5 group-hover:border-[#00FF66] group-hover:bg-[#00FF6620] transition-all duration-300"
+                      className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center rounded-2xl bg-[#00FF6610] border border-[#00FF6630] mb-3 sm:mb-5 group-hover:border-[#00FF66] group-hover:bg-[#00FF6620] transition-all duration-300"
                       whileHover={{
                         boxShadow: '0 0 20px #00FF66, 0 0 40px #00FF6630',
                       }}
                     >
-                      <category.icon className="text-[#00FF66] text-3xl" />
+                      <category.icon className="text-[#00FF66] text-2xl sm:text-3xl" />
                     </motion.div>
-                    <h3 className="font-[Orbitron] text-base font-semibold text-[#00FF66]">
+                    <h3 className="font-[Orbitron] text-sm sm:text-base font-semibold text-[#00FF66]">
                       {category.title}
                     </h3>
-                    <div className="flex items-center gap-1.5 text-[#00FF6680] group-hover:text-[#00FF66] transition-colors mt-3">
-                      <span className="font-[Share_Tech_Mono] text-[10px]">Explore</span>
-                      <FaChevronDown className="text-[8px] rotate-[-90deg]" />
+                    <div className="flex items-center gap-1.5 text-[#00FF6680] group-hover:text-[#00FF66] transition-colors mt-2 sm:mt-3">
+                      <span className="font-[Share_Tech_Mono] text-[9px] sm:text-[10px]">Explore</span>
+                      <FaChevronDown className="text-[7px] sm:text-[8px] rotate-[-90deg]" />
                     </div>
                   </>
                 )}
