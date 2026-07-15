@@ -74,7 +74,7 @@ const ProfileImage = ({ src, alt }) => {
         <img
           src={src}
           alt={alt}
-          className="w-44 h-44 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full border-2 border-[#00FF66] object-cover transition-transform duration-300 group-hover:scale-105"
+          className="w-36 h-36 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full border-2 border-[#00FF66] object-cover transition-transform duration-300 group-hover:scale-105"
           style={{ boxShadow: '0 0 20px #00FF66, 0 0 40px #00FF6640' }}
         />
         <div className="absolute inset-0 rounded-full border border-[#00FF6630] animate-pulse" />
@@ -160,7 +160,7 @@ const Hero = () => {
         </Suspense>
       </div>
 
-      <div className="section-container relative z-10 py-28 md:py-32 flex-1 flex items-center">
+      <div className="section-container relative z-10 py-16 md:py-28 flex-1">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-16">
           {/* LEFT: Photo + Software Developer */}
           <motion.div
@@ -177,7 +177,7 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="font-[Orbitron] text-sm md:text-base font-semibold text-[#00FF66] tracking-widest mt-10"
+              className="font-[Orbitron] text-sm md:text-base font-semibold text-[#00FF66] tracking-widest mt-6 md:mt-10"
               style={{ textShadow: '0 0 10px #00FF6680' }}
             >
               SOFTWARE DEVELOPER
@@ -237,7 +237,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7 }}
-              className="glass-card p-7 mb-12"
+              className="glass-card p-5 md:p-7 mb-6 md:mb-12"
             >
               <p className="font-[Share_Tech_Mono] text-xs text-[#00CC44] mb-4">
                 {'>'} whoami
@@ -251,7 +251,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-5 mb-12 justify-center md:justify-start"
+              className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-5 mb-6 md:mb-12 justify-center md:justify-start"
             >
               <a href="#categories" className="neon-btn" onClick={(e) => { e.preventDefault(); document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' }); }}>
                 View Portfolio
